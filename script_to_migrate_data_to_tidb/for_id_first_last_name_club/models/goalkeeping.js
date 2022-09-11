@@ -25,6 +25,10 @@ const Goalkeeping = sequelize.define(
             type : Sequelize.INTEGER,
             allowNull : true
         },
+        conceded: {
+            type : Sequelize.INTEGER,
+            allowNull : true
+        },
 
         saved_penalties : {
             type: Sequelize.INTEGER,

@@ -709,4 +709,4 @@ const migrateKeyStatsData = () =>{
 // migrateDefendingData()
 // migrateDisciplinaryData()
 // migrateDistributionData()
-//migrateGoalkeepingData()
+migrateGoalkeepingData()

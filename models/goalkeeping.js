@@ -21,6 +21,11 @@ const Goalkeeping = sequelize.define(
             allowNull : true
         },
 //saved,conceded,saved_penalties,cleansheets,,match_played
+        conceded : {
+            type : Sequelize.INTEGER,
+            allowNull : true
+        },
+
         saved : {
             type : Sequelize.INTEGER,
             allowNull : true

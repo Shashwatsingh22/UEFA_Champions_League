@@ -11,6 +11,8 @@ router.get('/playerName',mainController.serachByPlayerProfile);
 
 router.get('/clubName',mainController.serachByClubName);
 
-// router.post('/startProcess',checkPage.isPageOnNotion,checkPage.isPageOnConf,mainController.sendPage2Confluence);
+router.get('/clubNamesPos',mainController.clubNamesAndPos);
+
+router.get('/heatmap',mainController.heatMap);
 
 module.exports = router;
