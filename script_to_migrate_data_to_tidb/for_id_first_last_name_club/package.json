@@ -1,0 +1,22 @@
+{
+  "name": "for_id_first_last_name_club",
+  "version": "1.0.0",
+  "description": "For migrating selected data from csv to mysql",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./main.js"
+  },
+  "keywords": [
+    "MySQL",
+    "NodeJS",
+    "tiDB",
+    "tiup"
+  ],
+  "author": "Shashwat Singh",
+  "license": "ISC",
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.21.4"
+  }
+}
