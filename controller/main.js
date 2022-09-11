@@ -302,7 +302,6 @@ exports.heatMap = async(req,res,next) => {
                     catch(error){
                         console.log("ERROR,Inside Player Data",error)
                     }
-                    console.log(result);
                 }
             }
             catch(error){
@@ -405,7 +404,7 @@ exports.heatMap = async(req,res,next) => {
         default:
           break;
       }
-      
+
       res.status(200).json({
         status : true,
         message : "Fetched Data",
