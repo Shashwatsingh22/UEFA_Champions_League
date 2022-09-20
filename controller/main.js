@@ -73,6 +73,8 @@ exports.serachByPlayerProfile = async(req,res,next) => {
     let firstName = playerName[0];
     let lastName = playerName[1];
     
+    if(lastName === undefined) lastName="";
+    
     let playerCompleteData = new Object();
     
     //First Searching the User Basic Details
