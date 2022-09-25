@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../database/config');
+const Players = require('../models/users')
+
 
 const Attempts = sequelize.define(
     'Attempts',
@@ -13,7 +15,11 @@ const Attempts = sequelize.define(
 
         playerId : {
             type : Sequelize.INTEGER,
-            allowNull : false
+            allowNull : false,
+            refrences : {
+                model : Players,
+                key : 'id'
+            }
         },
 
         position : {

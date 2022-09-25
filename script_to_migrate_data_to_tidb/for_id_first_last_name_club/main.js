@@ -15,6 +15,40 @@ const KeyStats = require('./models/key_stats');
 //For Files
 let files = ["attacking.csv","attempts.csv","defending.csv","disciplinary.csv","distributon.csv","goalkeeping.csv","goals.csv","key_stats.csv"]
   
+//Associations
+//Players --> Attacking
+Players.hasOne(Attacking,{foreignKey : 'playerId'})
+Attacking.belongsTo(Players,{foreignKey : 'playerId'})
+
+//Players --> Goals
+Players.hasOne(Goals,{foreignKey : 'playerId'})
+Goals.belongsTo(Players,{foreignKey : 'playerId'})
+
+//Players --> Discplinary
+Players.hasOne(Disciplinary,{foreignKey : 'playerId'})
+Disciplinary.belongsTo(Players,{foreignKey : 'playerId'})
+
+//Players --> Attempts
+Players.hasOne(Attempts,{foreignKey : 'playerId'})
+Attempts.belongsTo(Players,{foreignKey : 'playerId'})
+
+//Players --> Defending
+Players.hasOne(Defending,{foreignKey : 'playerId'})
+Defending.belongsTo(Players,{foreignKey : 'playerId'})
+
+//Players --> Distribution
+Players.hasOne(Distribution,{foreignKey : 'playerId'})
+Distribution.belongsTo(Players,{foreignKey : 'playerId'})
+
+//Players --> Goalkeeping
+Players.hasOne(Goalkeeping,{foreignKey : 'playerId'})
+Goalkeeping.belongsTo(Players,{foreignKey : 'playerId'})
+
+//Players --> KeysStats
+Players.hasOne(KeyStats,{foreignKey : 'playerId'})
+KeyStats.belongsTo(Players,{foreignKey : 'playerId'})
+
+
 
 //Sync helps us to sync the model with database(Table)
 sequelize.sync().then(
@@ -702,11 +736,11 @@ const migrateKeyStatsData = () =>{
 }
 
 // migrateUserData();
-// migrateGoalsData();
+ migrateGoalsData();
 // migrateKeyStatsData()
 // migrateAttackingPlayerData()
 // migrateAttemptsData()
 // migrateDefendingData()
 // migrateDisciplinaryData()
 // migrateDistributionData()
-migrateGoalkeepingData()
+// migrateGoalkeepingData()

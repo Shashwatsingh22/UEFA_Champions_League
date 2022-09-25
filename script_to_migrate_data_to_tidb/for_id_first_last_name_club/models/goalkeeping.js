@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
 const sequelize = require('../database/config');
+const Players = require('../models/users')
+
 
 const Goalkeeping = sequelize.define(
     'Goalkeeping',
@@ -13,7 +15,11 @@ const Goalkeeping = sequelize.define(
 
         playerId : {
             type : Sequelize.INTEGER,
-            allowNull : false
+            allowNull : false,
+            refrences : {
+                model : Players,
+                key : 'id'
+            }
         },
 
         position : {
@@ -21,11 +27,12 @@ const Goalkeeping = sequelize.define(
             allowNull : true
         },
 //saved,conceded,saved_penalties,cleansheets,,match_played
-        saved : {
+        conceded : {
             type : Sequelize.INTEGER,
             allowNull : true
         },
-        conceded: {
+
+        saved : {
             type : Sequelize.INTEGER,
             allowNull : true
         },
